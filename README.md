@@ -4,16 +4,21 @@ A printable, experimental adaptation of [Vottivott's MicroDock V2](https://githu
 
 ## Download and print
 
-Open **[MicroDock_A1_Mini_PLA.3mf](MicroDock_A1_Mini_PLA.3mf)** in Bambu Studio. The project is set up for the A1 Mini, a 0.4 mm nozzle, 0.20 mm layers, textured PEI plate and Bambu PLA Basic. Select the appropriate profile and reslice if you use a different filament or build plate.
+Two Bambu Studio projects are available:
+
+- **[MicroDock_A1_Mini_PLA.3mf](MicroDock_A1_Mini_PLA.3mf)** — recommended: supports are configured, including inside both female base channels.
+- **[MicroDock_A1_Mini_PLA_NoSupports.3mf](MicroDock_A1_Mini_PLA_NoSupports.3mf)** — the same parts with supports disabled for manual setup. Bambu Studio reports unsupported areas on plates 1–5 and 7. Do not print those plates as-is without checking the preview and adding appropriate supports or changing the orientation.
+
+Both projects are set up for the A1 Mini, a 0.4 mm nozzle, 0.20 mm layers, textured PEI plate and Bambu PLA Basic. Select the appropriate profile and reslice if you use a different filament or build plate. The [STL files](STL/) contain only geometry, without generated supports.
 
 | Plate | Contents | Estimated PLA | Estimated time |
 |---|---|---:|---:|
-| 1–4 | Four base sections | 123.7 g | 3 h 40 min |
-| 5 | Two fit-test pieces | 10.0 g | 30 min |
+| 1–4 | Four base sections | 129.3 g | 3 h 57 min |
+| 5 | Two fit-test pieces | 11.8 g | 38 min |
 | 6 | Lower panel | 47.9 g | 72 min |
-| 7 | Upper panel and two base locking pins | 39.2 g | 58 min |
+| 7 | Upper panel and two base locking pins | 40.4 g | 64 min |
 
-Without the test plate, the estimate is approximately **211 g and 5 h 50 min**. Times and filament use depend on the printer and settings. The hood and keeper are not included in the project: reuse the original parts or obtain them from the [original MicroDock](https://github.com/Vottivott/microduck-playground/tree/main/hardware/microdock/stl).
+With the recommended supports and without the test plate, the estimate is approximately **218 g and 6 h 12 min**. Times and filament use depend on the printer and settings. The hood and keeper are not included in the project: reuse the original parts or obtain them from the [original MicroDock](https://github.com/Vottivott/microduck-playground/tree/main/hardware/microdock/stl).
 
 Individual files are available in [STL/](STL/). If printing these separately, print **two** copies of `base_lock_pin_print_2.stl`. The 3MF already includes both pins.
 
@@ -43,9 +48,9 @@ Place the sticker flat and centred horizontally on the front of the upper panel.
 
 ## Supports and validation
 
-Both panel faces are oriented toward the bed. The sticker face does not need support underneath it; the tested slicer setup generated no support for the lower panel and some support on the back of the upper panel and on the base. Inspect the preview and remove support carefully around the guides and flexible catches.
+Both panel faces are oriented toward the bed. The sticker face does not need support underneath it; the tested slicer setup generated no support for the lower panel and some support on the back of the upper panel and on the base. The recommended project enables supports on model surfaces as well as the build plate for the rear and front female base sections (plates 2 and 4). This creates support inside their channels. Inspect the preview and remove support carefully around the guides and flexible catches.
 
-The panel meshes were checked for closed geometry and assembled clearances. Bambu Studio 02.09.01.70 sliced all seven plates without warnings. The updated joint, long-term PLA strength, sticker recognition and the complete dock still require physical testing. The base is 2 mm thicker than the original and has a modified ramp; robot approach on that ramp has not been verified.
+The panel meshes were checked for closed geometry and assembled clearances. Bambu Studio 02.09.01.70 sliced all seven plates of the supported project without warnings; the support-free project produced floating-region warnings on six plates. The user reported a successful print with internal support on the rear female base; the front female section has the same support approach but has not yet been physically verified. The updated joint, long-term PLA strength, sticker recognition and the complete dock still require physical testing. The base is 2 mm thicker than the original and has a modified ramp; robot approach on that ramp has not been verified.
 
 ## Attribution and license
 
